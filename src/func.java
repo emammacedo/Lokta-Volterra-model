@@ -1,31 +1,24 @@
-/* Exercício de avaliação 1
- * 
- * Ana Catarina Pais Pereira - 2019244449
- * Ema Margarida da Silva Macedo - 2019233271
- * 
- Modelo Predador - Presa */
-
 public class func
 {
-	// Equações de Lotka-Volterra:
+	// EquaÃ§Ãµes de Lotka-Volterra:
 
-	// representação da equação dx/dt
+	// representaÃ§Ã£o da equaÃ§Ã£o dx/dt
 	public static double f1(double x, double y, double alfa, double beta)
 	{
 		return x * (alfa - beta * y);
 	}
 
-	// representação da equação dy/dt
+	// representaÃ§Ã£o da equaÃ§Ã£o dy/dt
 	public static double f2(double x, double y, double delta, double gama)
 	{
 		return y * (delta * x - gama);
 	}
 
-	// Método Runge-Kutta de 4ª ordem
+	// MÃ©todo Runge-Kutta de 4Âª ordem
 	public static double[] rk4(double x, double y, double alfa, double beta, double delta, double gama, double h)
 	{
 		double[] r = new double[2];
-		// função devolve um vetor na forma [x,y]
+		// funÃ§Ã£o devolve um vetor na forma [x,y]
 
 		double k1_f1 = f1(x, y, alfa, beta);
 		double k1_f2 = f2(x, y, delta, gama);
